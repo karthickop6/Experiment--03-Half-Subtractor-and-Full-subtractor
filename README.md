@@ -29,26 +29,65 @@ Diff = A ⊕ B ⊕ Bin B = A'Bin + A'B + BBin
 
 
 
-Write the detailed procedure here 
+Connect the supply (+5) to the circuit Switch ON the main switch If the output is 1,
+then the led glows
 
 
 ## Program:
 /*
 Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+
+Developed by: karti=hick P
+
+RegisterNumber:  22000995
+
+#HALF SUBTRACTOR:
+```
+
+module halfsub(output B,D, input X,Y);
+assign D = (X ^ Y);
+assign B = (~X & Y);
+endmodule
+```
+
+#FILL SUBTRACTOR:
+```
+
+module fullsub(X,Y,Z,Borrow,Difference);
+input X,Y,Z;
+output Borrow,Difference;
+assign Difference = (X^Y^Z);
+assign Borrow = (~X&(Y^Z)|(Y&Z));
+endmodule
+
+```
 */
 
 ## Output:
+HALF subtractor:
+#RTL realization:
 
-## Truthtable
-
-
-
-##  RTL realization
+## TIMING DIAGRAM:
 
 
-## Timing diagram 
+
+##  Truth table:
+
+
+#FULLsubtractor:
+#RTL realization:
+
+
+
+#TIMING diagram:
+
+
+
+#TRUTTABLE:
+
+
+
+
 
 ## Result:
 Thus the half subtractor and full subtractor circuits are designed and the truth tables is verified using quartus software.
